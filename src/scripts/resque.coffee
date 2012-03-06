@@ -1,7 +1,10 @@
 # Shows the status of resque queues
 #
 # resque - Lists the queues with pending jobs
-
+# 
+# You can set the following variables
+# RESQUE_WEB_URL
+# 
 module.exports = (robot) ->
   url = process.env.RESQUE_WEB_URL || 'http://localhost:5678'
   robot.respond /resque/i, (msg) ->
